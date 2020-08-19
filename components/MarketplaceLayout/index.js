@@ -12,7 +12,7 @@ import Hamburger from 'public/icons/regular/bars.svg';
 export default function IntegrationsLayout({ children, preview }) {
   const [visible, setVisible] = useState(false);
   const toggleVisibility = useCallback(() => {
-    setVisible(v => !v);
+    setVisible((v) => !v);
   });
 
   return (
@@ -35,7 +35,11 @@ export default function IntegrationsLayout({ children, preview }) {
                 </a>
               </Link>
               <div className={s.categories}>
-                <ActiveLink activeClassName={s.active} href="/marketplace">
+                <ActiveLink
+                  activeClassName={s.active}
+                  href="/marketplace"
+                  activateParentDepth="3"
+                >
                   <a>
                     <span>Featured</span>
                   </a>
@@ -43,6 +47,7 @@ export default function IntegrationsLayout({ children, preview }) {
                 <ActiveLink
                   activeClassName={s.active}
                   href="/marketplace/starters"
+                  activateParentDepth="3"
                 >
                   <a>
                     <span>Starter projects</span>
@@ -51,6 +56,7 @@ export default function IntegrationsLayout({ children, preview }) {
                 <ActiveLink
                   activeClassName={s.active}
                   href="/marketplace/plugins"
+                  activateParentDepth="3"
                 >
                   <a>
                     <span>Plugins</span>
@@ -59,6 +65,7 @@ export default function IntegrationsLayout({ children, preview }) {
                 <ActiveLink
                   activeClassName={s.active}
                   href="/marketplace/hosting"
+                  activateParentDepth="3"
                 >
                   <a>
                     <span>Hosting</span>
@@ -67,6 +74,7 @@ export default function IntegrationsLayout({ children, preview }) {
                 <ActiveLink
                   activeClassName={s.active}
                   href="/marketplace/enterprise"
+                  activateParentDepth="3"
                 >
                   <a>
                     <span>Enterprise</span>
